@@ -1,0 +1,101 @@
+Cliente_ID,Nombre,Apellido,Correo_Electronico,Telefono,Presupuesto_Maximo,Preferencia_de_Ubicacion,Fecha_de_Registro
+1,Esther,Salvà,janglada@example.com,+34983 001 509,110000000,Jaén,2022-09-18
+2,Rico,Riquelme,herminia92@example.net,+34828 189 684,342000000,Barcelona,2022-03-25
+3,Gabriela,Domingo,wvalentin@example.com,+34 973 425 260,188000000,Guipúzcoa,2021-11-29
+4,Jessica,Luís,cluna@example.net,+34 848025048,546000000,Lleida,2022-01-31
+5,Fanny,Alcalde,soraya24@example.net,+34 874972084,550000000,Badajoz,2022-07-03
+6,Lara,Ricart,fonsecaale@example.net,+34988 739 005,273000000,La Coruña,2023-05-21
+7,Lucía,Almeida,wfuertes@example.com,+34 826758358,62000000,Vizcaya,2022-10-19
+8,Dafne,Olmo,eladiohigueras@example.com,+34 875089162,372000000,Lleida,2023-03-11
+9,Genoveva,Belda,calderonhernando@example.org,+34 886 921 315,982000000,Las Palmas,2022-04-04
+10,Paulina,Gallo,eusebiamorales@example.com,+34971 12 22 90,991000000,Salamanca,2023-04-14
+11,Pilar,Viña,zacariasarnaiz@example.net,+34728 843 137,35000000,Lugo,2021-11-06
+12,Roldán,Garcia,sotojordan@example.com,+34733 41 11 70,389000000,Girona,2022-07-25
+13,Imelda,Hernando,carolina75@example.com,+34985960235,821000000,Santa Cruz de Tenerife,2021-12-11
+14,Apolinar,Ferrándiz,marcelinodiaz@example.net,+34 923 148 151,697000000,Toledo,2023-03-30
+15,Luís,Pla,msilva@example.com,+34 947233327,165000000,Valencia,2022-12-21
+16,Rolando,Gonzalez,kmarti@example.com,+34 983 803 254,116000000,Murcia,2022-09-16
+17,Chuy,Sala,uquevedo@example.com,+34924936165,109000000,Cáceres,2022-11-30
+18,Pastora,Arnaiz,zsantos@example.com,+34921884895,348000000,La Rioja,2022-01-16
+19,Domingo,Soria,buenocasemiro@example.net,+34947 744 792,46000000,Ávila,2022-12-14
+20,Isa,Bermudez,xarranz@example.org,+34732 87 36 13,714000000,Castellón,2023-09-07
+21,Leocadio,Ponce,cadenascustodia@example.org,+34 746 38 94 51,155000000,Soria,2022-05-10
+22,Diego,Cobos,ricardosalvador@example.com,+34922 810 683,642000000,Palencia,2021-12-03
+23,Angelino,Alfaro,manjonvenceslas@example.com,+34 946 283 731,990000000,Cádiz,2022-07-15
+24,Abril,Galvez,gabascal@example.net,+34827080108,309000000,Alicante,2021-11-19
+25,Nicodemo,Garriga,cabreraadan@example.com,+34 921972052,289000000,Palencia,2022-03-04
+26,Miguela,Portillo,ovelez@example.net,+34 806 124 839,603000000,Murcia,2021-10-04
+27,Cecilia,Torrent,agata61@example.com,+34980 545 260,917000000,Sevilla,2022-12-30
+28,Serafina,Barroso,oibanez@example.net,+34842 27 14 60,703000000,Girona,2022-12-03
+29,Luz,Guzmán,mbarros@example.net,+34945 32 81 97,904000000,Salamanca,2023-01-22
+30,Carmelo,Mosquera,vinicioamat@example.com,+34 981 94 23 20,543000000,Teruel,2023-06-05
+31,Galo,Roselló,imartin@example.net,+34973 11 64 33,441000000,Toledo,2021-10-05
+32,Emelina,Díez,armida99@example.org,+34 925131768,475000000,Teruel,2021-12-12
+33,Saturnino,Arjona,maxi82@example.com,+34821 10 36 31,594000000,La Coruña,2023-02-15
+34,Lupita,Múgica,luciavelez@example.net,+34 879 85 74 56,984000000,Toledo,2023-06-06
+35,Felipa,Antúnez,kgimeno@example.net,+34 980 15 41 68,949000000,Ceuta,2023-03-31
+36,Isa,Fiol,isaanguita@example.com,+34 980 734 766,307000000,Barcelona,2023-06-18
+37,Balduino,Botella,ltaboada@example.net,+34 924 54 35 95,873000000,Sevilla,2022-01-20
+38,Julio,Gual,severo24@example.org,+34982942912,964000000,Sevilla,2023-06-09
+39,Rita,Torrens,xiomara56@example.com,+34926036134,665000000,Segovia,2023-05-03
+40,Cesar,Barón,modesto18@example.com,+34885 80 57 64,832000000,Valladolid,2021-12-21
+41,Emilia,Serna,coronamariscal@example.org,+34800821879,919000000,Santa Cruz de Tenerife,2023-03-06
+42,Porfirio,Anglada,martiroberta@example.org,+34 844194963,761000000,Ourense,2023-05-23
+43,Gabino,Aguiló,gargallojosefina@example.com,+34 874 48 58 82,185000000,Badajoz,2022-10-02
+44,Ariel,Tovar,mbarbero@example.org,+34902 73 72 52,79000000,Burgos,2023-05-30
+45,Daniel,Diéguez,cuencafausto@example.org,+34 723668519,630000000,Ceuta,2021-12-23
+46,Erasmo,Coll,pazdiaz@example.net,+34 972 94 83 13,911000000,Castellón,2021-10-26
+47,Amor,Rocha,sol97@example.com,+34 853 238 011,816000000,Ceuta,2022-09-06
+48,Juan Antonio,Guillen,arsenio61@example.net,+34980 327 540,211000000,Huelva,2022-08-30
+49,Carlito,Camino,rcanete@example.com,+34 806 032 122,509000000,Granada,2022-11-14
+50,Noemí,Cerdá,efigueroa@example.com,+34 611 27 96 28,963000000,Alicante,2021-11-24
+51,Octavia,Cáceres,pvalenzuela@example.com,+34803444574,728000000,Valencia,2022-03-29
+52,Ciríaco,Caballero,mayogustavo@example.net,+34 735 116 386,936000000,Badajoz,2021-09-27
+53,Emiliano,Pablo,constanzaayala@example.com,+34941 736 820,47000000,Guadalajara,2022-09-06
+54,Victor,Aznar,yguillen@example.net,+34 947 01 89 56,428000000,Santa Cruz de Tenerife,2023-06-07
+55,Isabela,Vallejo,carla10@example.net,+34 885610379,810000000,Almería,2023-02-19
+56,Teodosio,Puerta,jorge41@example.com,+34982704083,674000000,Granada,2023-04-26
+57,Brunilda,Rosa,andreatorrijos@example.net,+34 844515027,804000000,Zamora,2021-10-29
+58,María Belén,Camino,juan-antonio18@example.org,+34 927192720,433000000,Ourense,2022-05-18
+59,Patricio,Pineda,barrigaamada@example.org,+34885528462,210000000,Granada,2022-04-23
+60,Ceferino,Paz,crescenciaexposito@example.net,+34975300448,838000000,Toledo,2022-10-28
+61,Silvestre,Pozo,cuevasisa@example.org,+34849 589 543,945000000,Barcelona,2022-05-18
+62,Consuela,Esteban,vanesa52@example.com,+34983 06 53 45,620000000,Las Palmas,2022-08-27
+63,Jordi,Mascaró,marcial10@example.net,+34 843 754 117,917000000,Málaga,2023-07-19
+64,Plinio,Exposito,santamariabenigna@example.com,+34928 708 096,239000000,Vizcaya,2021-11-25
+65,Eulalia,Duarte,hector96@example.org,+34849 98 24 96,902000000,Ceuta,2023-08-15
+66,Nadia,Cerdán,sonia22@example.org,+34 942 268 954,615000000,Ciudad,2023-02-06
+67,Piedad,Morell,amadahigueras@example.org,+34 971 791 570,143000000,Castellón,2023-06-11
+68,Ricarda,Mendizábal,agustinisidro@example.org,+34945 95 88 83,393000000,Soria,2023-06-09
+69,Jose Angel,Cases,azconarafael@example.com,+34920 356 759,343000000,Madrid,2022-09-25
+70,Claudio,Sánchez,salazarartemio@example.net,+34925 818 319,231000000,Santa Cruz de Tenerife,2022-05-26
+71,David,Balaguer,nilda26@example.com,+34862 061 879,541000000,Girona,2022-05-15
+72,Etelvina,Pagès,ambartamarit@example.com,+34947 38 13 05,924000000,Cuenca,2022-11-14
+73,Telmo,Rius,obdulia88@example.net,+34 879362256,775000000,La Rioja,2023-01-10
+74,Aitana,Alvarez,bmora@example.com,+34 947915339,109000000,Pontevedra,2023-09-09
+75,Amado,Campillo,lramon@example.com,+34918 61 77 87,222000000,Badajoz,2022-01-16
+76,Buenaventura,Lastra,amorrafa@example.com,+34 974 51 96 70,264000000,Tarragona,2022-01-24
+77,Daniela,Roig,saezinigo@example.org,+34982 558 028,721000000,Teruel,2023-06-07
+78,Angélica,Royo,hmendez@example.org,+34823 34 43 59,192000000,La Coruña,2022-08-19
+79,Candela,Pina,lujanlucas@example.com,+34 879 370 645,854000000,Ceuta,2023-09-11
+80,Goyo,Landa,isalmeron@example.com,+34986 898 138,539000000,Toledo,2023-05-21
+81,Manu,Cuervo,amada36@example.net,+34943 249 761,986000000,Cuenca,2023-06-21
+82,Hugo,Cid,unaranjo@example.net,+34 877461419,799000000,Valencia,2021-10-06
+83,Angélica,Tejedor,pedrosaeloy@example.org,+34 800 00 99 91,952000000,Barcelona,2023-05-12
+84,Obdulia,Ariño,javiera16@example.net,+34 973 188 986,755000000,Sevilla,2022-07-19
+85,Domitila,Cárdenas,lreig@example.org,+34924737686,903000000,Lugo,2023-06-07
+86,Juan Pablo,Tomas,rpi@example.net,+34 872 233 829,674000000,Ávila,2021-10-11
+87,Andrés Felipe,Lorenzo,lupecazorla@example.com,+34982 298 177,772000000,Córdoba,2022-12-24
+88,Alejo,Teruel,brunatividad@example.net,+34 921936241,244000000,Álava,2023-01-19
+89,Isidro,Ocaña,xtoro@example.org,+34823 022 549,572000000,Cáceres,2022-06-04
+90,Remigio,Catalán,victorinoescamilla@example.net,+34926 04 26 60,147000000,Valladolid,2022-03-10
+91,Visitación,Goñi,guadalupeespada@example.net,+34 843 997 365,840000000,Huelva,2023-03-25
+92,Goyo,Iglesias,peramacario@example.com,+34745 215 148,298000000,Ourense,2021-09-19
+93,Lorena,Carmona,lloretbenjamin@example.org,+34953 01 09 38,420000000,Palencia,2023-08-25
+94,Fátima,Barrena,qdelgado@example.org,+34880 35 77 46,772000000,Baleares,2022-05-21
+95,Alfredo,Ayllón,nadia53@example.net,+34847 083 103,834000000,Málaga,2023-05-22
+96,Eva María,Montero,yvilla@example.com,+34 807560228,892000000,Cantabria,2021-10-28
+97,Rafaela,Anglada,yroman@example.net,+34843 77 71 22,262000000,Pontevedra,2022-09-12
+98,Vicenta,Sevillano,barrosoivan@example.com,+34 950 68 98 14,910000000,Salamanca,2023-05-25
+99,Cayetana,Haro,echeverriaapolonia@example.org,+34927 94 99 13,193000000,Burgos,2023-02-13
+100,Goyo,Pons,julianamiralles@example.org,+34928474874,678000000,Baleares,2023-06-26
