@@ -12,7 +12,7 @@ csv_writer.writerow(['Propiedad_ID', 'Precio_Predicho'])
 # Procesa las líneas de entrada
 for linea in sys.stdin:
     # Parsea la entrada del mapper
-    partes = linea.strip().split('\t')
+    partes = linea.strip().split(',')
 
     # Verifica si hay suficientes partes
     if len(partes) == 3:
