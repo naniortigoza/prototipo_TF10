@@ -24,7 +24,7 @@ data_nuevos['Precio_Predicho'] = predicciones
 fecha_actual = datetime.now().strftime("%Y-%m-%d")
 
 # Nombre del archivo con la fecha actual
-nombre_archivo = f'datos/datos_predichos_{fecha_actual}.csv'
+nombre_archivo = f'datos_predicho/precios_{fecha_actual}.csv'
 
 # Guarda el DataFrame en el archivo CSV con el nombre que incluye la fecha actual
 data_nuevos.to_csv(nombre_archivo, index=False)
