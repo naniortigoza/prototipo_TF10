@@ -15,18 +15,18 @@ for linea in sys.stdin:
     datos = linea.strip().split(',')  # Suponiendo que los datos están separados por comas
     
     # Verificar el tipo de datos y omitir encabezados en cada archivo
-    if len(datos) == 6 and datos[0] != 'ID_Datos':
+    if len(datos) == 8 and datos[0] != 'ID_Datos':
         # Este es un registro de datos_economicos.csv
-        ID_Datos, ID_Zona, Fecha, Tasa_Inflacion, Variacion_PIB, Precio_m2 = datos
-        
-        # Extraer características de la fecha
-        fecha_obj = datetime.strptime(Fecha, '%d/%m/%Y')
-        dia = fecha_obj.day
-        mes = fecha_obj.month
-        anio = fecha_obj.year
+        ID_Datos, ID_Zona, Dia, Mes, Anio, Tasa_Inflacion, Variacion_PIB, Precio_m2 = datos
         
         # Convertir características a números flotantes y pasar al modelo
-        datos_para_modelo = [[dia, mes, anio, float(Tasa_Inflacion), float(Variacion_PIB), float(Precio_m2)]]  # Convierte a matriz 2D
+        datos_para_modelo = [
+            [
+                float(Tasa_Inflacion),
+                float(Variacion_PIB),
+                float(Precio_m2)
+            ]
+        ]  # Convierte a matriz 2D
         resultado_prediccion = modelo.predict(datos_para_modelo)
         
         # Emitir resultados de predicción (clave, valor)
@@ -34,7 +34,17 @@ for linea in sys.stdin:
     
     elif len(datos) == 10 and datos[0] != 'Propiedad_ID':
         # Este es un registro de datos_propiedades.csv
-        Propiedad_ID, Zona_ID, Tipo_Propiedad, Ubicacion, Tamano, Habitaciones, Precio, Antiguedad, Caracteristicas, Ubicacion_Especial = datos
+        Propiedad_ID, Zona_ID, Tipo_Propiedad, Ubicacion, Tamano, Habitaciones, Precio, Antiguedad, Carac_Adicionales, Ubicacion_Especial = datos
+        
+        # Convertir características a números flotantes y pasar al modelo
+        datos_para_modelo = [
+            [
+                float(Tamano),
+                float(Habitaciones),
+                float(Precio)
+            ]
+        ]  # Convierte a matriz 2D
+        resultado_prediccion = modelo.predict(datos_para_modelo)
         
         # Emite resultados de predicción para datos de propiedades
         print(f'Prediccion_Datos_Propiedades\t{Propiedad_ID}\t{resultado_prediccion}')
