@@ -21,6 +21,9 @@ rf_model.fit(X, y)
 # Realizar predicciones en el conjunto de datos
 y_pred = rf_model.predict(X)
 
+# Redondear los valores predichos a números enteros
+y_pred_enteros = [round(valor) for valor in y_pred]
+
 # Calcular el error cuadrático medio (MSE)
 mse = mean_squared_error(y, y_pred)
 print(f'Error cuadrático medio (MSE): {mse}')
@@ -35,8 +38,8 @@ print('\nImportancia de las variables:')
 for i, importancia in enumerate(importancias):
     print(f'Variable {X.columns[i]}: {importancia}')
 
-# Exportar los resultados de predicción a un archivo CSV con el precio real y predicho
-resultados = pd.DataFrame({'Precio_Real': y, 'Precio_Predicho': y_pred})
+# Exportar los resultados de predicción a un archivo CSV con el precio real y predicho (enteros)
+resultados = pd.DataFrame({'Precio_Real': y, 'Precio_Predicho': y_pred_enteros})
 resultados.to_csv('datos/resultados_prediccion.csv', index=False)
 
 # Guardar el modelo entrenado en un archivo
