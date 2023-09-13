@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 from sklearn.model_selection import train_test_split        # pip install scikit-learn
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
@@ -32,12 +33,17 @@ print(f'Error cuadrático medio (MSE): {mse}')
 r2 = r2_score(y_test, y_pred)
 print(f'Coeficiente de determinación (R^2): {r2}')
 
+# Guardar el modelo entrenado en un archivo
+modelo_archivo = 'modelo_random_forest.pkl'
+joblib.dump(rf_model, modelo_archivo)
+print(f'Modelo guardado en {modelo_archivo}')
+
 # Exportar los resultados de predicción a un archivo CSV
 resultados = pd.DataFrame({'Precio_Real': y_test, 'Precio_Predicho': y_pred})
 resultados.to_csv('datos/resultados_prediccion.csv', index=False)
 
 # Obtener la importancia de las variables
 importancias = rf_model.feature_importances_
-print('Importancia de las variables:')
+print('\nImportancia de las variables:')
 for i, importancia in enumerate(importancias):
     print(f'Variable {X.columns[i]}: {importancia}')
