@@ -6,6 +6,9 @@ import sys
 total_predicciones = 0
 suma_predicciones = 0.0
 
+# Lista para almacenar los resultados
+resultados = []
+
 for linea in sys.stdin:
     # Parsea la entrada del mapper
     clave, Propiedad_ID, valor_prediccion = linea.strip().split('\t')
@@ -20,5 +23,9 @@ for linea in sys.stdin:
 # Calcula estadísticas finales
 promedio_predicciones = suma_predicciones / total_predicciones if total_predicciones > 0 else 0
 
-# Emite el resultado final
-print(f'Promedio_Predicciones_Propiedades\t{promedio_predicciones}')
+# Agrega el resultado a la lista de resultados
+resultados.append(f'Promedio_Predicciones_Propiedades\t{promedio_predicciones}')
+
+# Escribe los resultados en un archivo CSV
+with open('resultados.csv', 'w') as archivo_salida:
+    archivo_salida.write('\n'.join(resultados))
