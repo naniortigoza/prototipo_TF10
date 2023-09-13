@@ -26,7 +26,7 @@ for linea in sys.stdin:
         anio = fecha_obj.year
         
         # Convertir características a números flotantes y pasar al modelo
-        datos_para_modelo = [dia, mes, anio, float(Tasa_Inflacion), float(Variacion_PIB), float(Precio_m2)]
+        datos_para_modelo = [[dia, mes, anio, float(Tasa_Inflacion), float(Variacion_PIB), float(Precio_m2)]]  # Convierte a matriz 2D
         resultado_prediccion = modelo.predict(datos_para_modelo)
         
         # Emitir resultados de predicción (clave, valor)
