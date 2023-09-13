@@ -1,25 +1,23 @@
-# reducer.py
-from operator import itemgetter
+#!/usr/bin/env python
+
 import sys
 
-current_word = None
-current_count = 0
+# Inicializa variables para realizar cálculos de resumen
+total_predicciones = 0
+suma_predicciones = 0.0
 
-for line in sys.stdin:
-    word, count = line.strip().split('\t', 1)
+for linea in sys.stdin:
+    # Parsea la entrada del mapper
+    clave, valor = linea.strip().split('\t')
+    
+    # Realiza cálculos de resumen con los valores
+    if clave == 'Prediccion':
+        valor_prediccion = float(valor)
+        total_predicciones += 1
+        suma_predicciones += valor_prediccion
 
-    try:
-        count = int(count)
-    except ValueError:
-        continue
+# Calcula estadísticas finales
+promedio_predicciones = suma_predicciones / total_predicciones
 
-    if current_word == word:
-        current_count += count
-    else:
-        if current_word:
-            print(f"{current_word}\t{current_count}")
-        current_word = word
-        current_count = count
-
-if current_word:
-    print(f"{current_word}\t{current_count}")
+# Emite el resultado final
+print(f'Promedio_Predicciones\t{promedio_predicciones}')
