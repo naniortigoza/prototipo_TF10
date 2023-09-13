@@ -9,10 +9,10 @@ datos_economicos = pd.read_csv('datos/datos_economicos.csv')
 datos_propiedades = pd.read_csv('datos/datos_propiedades.csv')
 
 # Unir los datos por Zona_ID
-datos_combinados = datos_propiedades.merge(datos_economicos, left_on='Zona_ID', right_on='ID_Zona', how='inner')
+datos_combinados = datos_propiedades.merge(datos_economicos, left_on='Zona_ID', right_on='Zona_ID', how='inner')
 
 # Preparar los datos
-X = datos_combinados[['Tasa de Inflación', 'Variacion PIB per capita', 'Tamanho', 'Habitaciones', 'Tipo_de_Propiedad']]
+X = datos_combinados[['Tasa_Inflacion', 'Variacion_PIB', 'Tamanho', 'Habitaciones', 'Tipo_Propiedad']]
 y = datos_combinados['Precio']
 
 # Dividir los datos en conjunto de entrenamiento y prueba
@@ -49,4 +49,3 @@ for i, importancia in enumerate(importancias):
     print(f'Variable {X.columns[i]}: {importancia}')
 
 
-    

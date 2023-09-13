@@ -17,7 +17,7 @@ for linea in sys.stdin:
     # Verificar el tipo de datos y omitir encabezados en cada archivo
     if len(datos) == 8 and datos[0] != 'ID_Datos':
         # Este es un registro de datos_economicos.csv
-        ID_Datos, ID_Zona, Dia, Mes, Anio, Tasa_Inflacion, Variacion_PIB, Precio_m2 = datos
+        ID_Datos, ID_Zona, Dia, Mes, Anho, Tasa_Inflacion, Variacion_PIB, Precio_m2 = datos
         
         # Convertir características a números flotantes y pasar al modelo
         datos_para_modelo = [
@@ -25,7 +25,7 @@ for linea in sys.stdin:
                 float(Tasa_Inflacion),
                 float(Variacion_PIB),
                 float(Precio_m2),
-                float(Tamano),
+                float(Tamanho),
                 float(Habitaciones)
             ]
         ]  # Convierte a matriz 2D
@@ -36,14 +36,16 @@ for linea in sys.stdin:
     
     elif len(datos) == 10 and datos[0] != 'Propiedad_ID':
         # Este es un registro de datos_propiedades.csv
-        Propiedad_ID, Zona_ID, Tipo_Propiedad, Ubicacion, Tamano, Habitaciones, Precio, Antiguedad, Carac_Adicionales, Ubicacion_Especial = datos
+        Propiedad_ID, Zona_ID, Tipo_Propiedad, Ubicacion, Tamanho, Habitaciones, Precio, Antiguedad, Carac_Adicionales, Ubicacion_Especial = datos
         
         # Convertir características a números flotantes y pasar al modelo
         datos_para_modelo = [
             [
-                float(Tamano),
-                float(Habitaciones),
-                float(Precio)
+                float(Tasa_Inflacion),
+                float(Variacion_PIB),
+                float(Precio_m2),
+                float(Tamanho),
+                float(Habitaciones)
             ]
         ]  # Convierte a matriz 2D
         resultado_prediccion = modelo.predict(datos_para_modelo)

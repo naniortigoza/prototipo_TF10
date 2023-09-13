@@ -49,7 +49,7 @@ urls = [
     ]
 
 # Crear una lista de encabezados de columna
-encabezados = ["Propiedad_ID", "Zona_ID", "Tipo_de_Propiedad", "Ubicacion", "Tamanho", "Habitaciones", "Precio", "Antiguedad", "Carac. Adicionales", "Ubicacion Especial"]
+encabezados = ["Propiedad_ID", "Zona_ID", "Tipo_Propiedad", "Ubicacion", "Tamanho", "Habitaciones", "Precio", "Antiguedad", "Carac_Adicionales", "Ubicacion_Especial"]
 
 # Crear una lista para almacenar los registros ficticios
 registros = []

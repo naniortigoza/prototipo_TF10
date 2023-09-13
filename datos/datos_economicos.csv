@@ -1,4 +1,4 @@
-ID_Datos,ID_Zona,Dia,Mes,Anio,Tasa de Inflación,Variacion PIB per capita,Precio m2
+ID_Datos,Zona_ID,Dia,Mes,Anho,Tasa_Inflacion,Variacion_PIB,Precio_m2
 1,1,01,11,2019,1.9,-1.9,620
 2,2,01,11,2019,1.9,-1.9,750
 3,3,01,11,2019,1.9,-1.9,490
