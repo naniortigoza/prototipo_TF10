@@ -28,5 +28,5 @@ hdfs_client = InsecureClient('http://localhost:50070', user='hadoop')
 
 # Subir el archivo de datos predichos a HDFS
 with open('datos/datos_predichos.csv', 'rb') as local_file:
-    hdfs_client.write('/ruta_en_HDFS/datos_predichos.csv', local_file)
+    hdfs_client.write('/predicciones_hdfs/datos_predichos.csv', local_file)
 
