@@ -6,6 +6,9 @@ import joblib  # Importa la biblioteca necesaria para cargar el modelo
 # Cargar el modelo entrenado
 modelo = joblib.load('modelo_random_forest.pkl')
 
+# Leer la primera línea que contiene los encabezados y omitirla
+header = next(sys.stdin)
+
 for linea in sys.stdin:
     # Supongamos que cada línea contiene datos de uno de los archivos
     datos = linea.strip().split(',')  # Suponiendo que los datos están separados por comas
