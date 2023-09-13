@@ -149,7 +149,7 @@ for url in urls:
         registros.append([propiedad_id, zona_id, tipo_de_propiedad, ubicacion, tamanho, habitaciones, precio, antiguedad, caracteristicas_adi, ubicacion_esp])
 
 # Nombre del archivo CSV donde deseas guardar los datos
-nombre_archivo = 'datos/datos_propiedades_externo.csv'
+nombre_archivo = 'datos/datos_propiedades.csv'
 
 # Escribir los datos ficticios en un archivo CSV
 with open(nombre_archivo, mode='w', newline='', encoding='utf-8') as archivo_csv:
