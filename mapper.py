@@ -2,7 +2,6 @@
 
 import sys
 import joblib  # Importa la biblioteca necesaria para cargar el modelo
-import pandas as pd  # Importa Pandas para manipular los datos
 
 # Cargar el modelo entrenado
 modelo = joblib.load('modelo_random_forest.pkl')
@@ -37,18 +36,17 @@ for linea in sys.stdin:
         
         # Convertir características a números flotantes
         datos_para_modelo = [
+            float(Tasa_Inflacion),
+            float(Variacion_PIB),
+            float(Precio_m2),
             float(Tamanho),
             float(Habitaciones),
-            float(Precio),
         ]
         
         datos_combinados.append(datos_para_modelo)
 
-# Convertir la lista de datos combinados en un DataFrame
-datos_para_modelo_df = pd.DataFrame(datos_combinados)
-
 # Realizar predicciones en el conjunto de datos combinados
-resultados_prediccion = modelo.predict(datos_para_modelo_df)
+resultados_prediccion = modelo.predict(datos_combinados)
 
 # Emitir resultados de predicción (clave, valor)
 for resultado in resultados_prediccion:
