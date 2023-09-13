@@ -7,11 +7,26 @@ import joblib  # Importa la biblioteca necesaria para cargar el modelo
 modelo = joblib.load('modelo_random_forest.pkl')
 
 for linea in sys.stdin:
-    # Supongamos que cada línea contiene una instancia de datos
-    # Procesa la línea y realiza predicciones con el modelo
+    # Supongamos que cada línea contiene datos de uno de los archivos
     datos = linea.strip().split(',')  # Suponiendo que los datos están separados por comas
-    # Realiza cualquier preprocesamiento necesario en los datos
-    # A continuación, realiza una predicción con el modelo
-    resultado_prediccion = modelo.predict(datos)
-    # Emite la salida del mapper (clave, valor)
-    print(f'Prediccion\t{resultado_prediccion}')
+    
+    # Verificar el tipo de datos
+    if len(datos) == 6:
+        # Este es un registro de datos_economicos.csv
+        ID_Datos, ID_Zona, Fecha, Tasa_Inflacion, Variacion_PIB, Precio_m2 = datos
+        
+        # Realiza cualquier preprocesamiento necesario en estos datos
+        # A continuación, realiza una predicción con el modelo
+        
+        # Emitir resultados de predicción (clave, valor)
+        print(f'Prediccion_Datos_Economicos\t{ID_Datos}\t{modelo.predict(datos)}')
+    
+    elif len(datos) == 10:
+        # Este es un registro de datos_propiedades.csv
+        Propiedad_ID, Zona_ID, Tipo_Propiedad, Ubicacion, Tamano, Habitaciones, Precio, Antiguedad, Caracteristicas, Ubicacion_Especial = datos
+        
+        # Realiza cualquier preprocesamiento necesario en estos datos
+        # A continuación, realiza una predicción con el modelo
+        
+        # Emitir resultados de predicción (clave, valor)
+        print(f'Prediccion_Datos_Propiedades\t{Propiedad_ID}\t{modelo.predict(datos)}')
