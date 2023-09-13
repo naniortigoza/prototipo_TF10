@@ -24,7 +24,9 @@ for linea in sys.stdin:
             [
                 float(Tasa_Inflacion),
                 float(Variacion_PIB),
-                float(Precio_m2)
+                float(Precio_m2),
+                float(Tamano),
+                float(Habitaciones)
             ]
         ]  # Convierte a matriz 2D
         resultado_prediccion = modelo.predict(datos_para_modelo)
