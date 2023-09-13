@@ -3,12 +3,9 @@ import joblib
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Cargar los datos con nombres de columnas
-columnas_datos_economicos = ['ID_Datos', 'Zona_ID', 'Dia', 'Mes', 'Anho', 'Tasa_Inflacion', 'Variacion_PIB', 'Precio_m2']
-columnas_datos_propiedades = ['Propiedad_ID', 'Zona_ID', 'Tipo_Propiedad', 'Ubicacion', 'Tamanho', 'Habitaciones', 'Precio', 'Antiguedad', 'Carac_Adicionales', 'Ubicacion_Especial']
-
-datos_economicos = pd.read_csv('datos/datos_economicos.csv', names=columnas_datos_economicos, header=None)
-datos_propiedades = pd.read_csv('datos/datos_propiedades.csv', names=columnas_datos_propiedades, header=None)
+# Cargar los datos
+datos_economicos = pd.read_csv('datos/datos_economicos.csv')
+datos_propiedades = pd.read_csv('datos/datos_propiedades.csv')
 
 # Unir los datos por Zona_ID
 datos_combinados = datos_propiedades.merge(datos_economicos, left_on='Zona_ID', right_on='Zona_ID', how='inner')
@@ -18,7 +15,7 @@ X = datos_combinados[['Tasa_Inflacion', 'Variacion_PIB', 'Precio_m2', 'Tamanho',
 y = datos_combinados['Precio']
 
 # Ajustar el modelo Random Forest
-rf_model = RandomForestRegressor(n_estimators=200, random_state=42, max_depth=10)  # Añadir max_depth para evitar sobreajuste
+rf_model = RandomForestRegressor(n_estimators=100, random_state=42, max_depth=10)  # Añadir max_depth para evitar sobreajuste
 rf_model.fit(X, y)
 
 # Realizar predicciones en el conjunto de datos
