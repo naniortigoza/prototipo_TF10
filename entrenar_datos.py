@@ -47,3 +47,6 @@ importancias = rf_model.feature_importances_
 print('\nImportancia de las variables:')
 for i, importancia in enumerate(importancias):
     print(f'Variable {X.columns[i]}: {importancia}')
+
+
+    
