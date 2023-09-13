@@ -38,10 +38,6 @@ print('\nImportancia de las variables:')
 for i, importancia in enumerate(importancias):
     print(f'Variable {X.columns[i]}: {importancia}')
 
-# Exportar los resultados de predicción a un archivo CSV con el precio real y predicho (enteros)
-resultados = pd.DataFrame({'Precio_Real': y, 'Precio_Predicho': y_pred_enteros})
-resultados.to_csv('datos/resultados_prediccion.csv', index=False)
-
 # Guardar el modelo entrenado en un archivo
 modelo_archivo = 'modelo_random_forest.pkl'
 joblib.dump(rf_model, modelo_archivo)
