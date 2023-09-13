@@ -1,5 +1,6 @@
 import pandas as pd
 import joblib
+from hdfs import InsecureClient    # pip install hdfs
 
 # Cargar el modelo entrenado
 model = joblib.load("modelo_random_forest.pkl")
@@ -21,6 +22,3 @@ data_nuevos['Precio_Predicho'] = predicciones
 
 # Guardar el DataFrame con las predicciones en un nuevo archivo CSV
 data_nuevos.to_csv('datos/datos_predichos.csv', index=False)
-
-# Imprimir las primeras filas del DataFrame resultante
-#print(data_nuevos.head())
