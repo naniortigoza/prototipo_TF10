@@ -17,6 +17,9 @@ if not all(col in data_nuevos.columns for col in required_columns):
 X_nuevos = data_nuevos[required_columns]  # Seleccionar las características
 predicciones = model.predict(X_nuevos)  # Realizar las predicciones
 
+# Convertir los valores predichos a enteros (esto eliminará los decimales)
+predicciones = predicciones.astype(int)
+
 # Agregar las predicciones al DataFrame original
 data_nuevos['Precio_Predicho'] = predicciones
 
