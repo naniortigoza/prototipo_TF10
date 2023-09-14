@@ -13,8 +13,9 @@ from datetime import datetime
 id_auto = 1
 year = datetime.now().year
 
-# Lee el archivo CSV en un DataFrame
-data = pd.read_csv("datos/datos_zonas.csv")
+# Lee los archivos CSV en un DataFrame
+data_zona = pd.read_csv("datos/datos_zonas.csv")
+data_economicos = pd.read_csv("datos/datos_economicos.csv")
 
 # Función para generar un nuevo ID
 def generar_id():
@@ -25,10 +26,19 @@ def generar_id():
 
 # Función para buscar el texto en la columna Barrios
 def buscar_zona_id(texto):
-    for index, row in data.iterrows():
+    for index, row in data_zona.iterrows():
         if texto in row["Barrios"]:
             return row["Zona_ID"]
     return None
+
+# Función para obtener el último ID_Datos correspondiente a una Zona_ID en data_economicos
+def obtener_ultimo_id_datos(zona_id):
+    filtro = data_economicos['Zona_ID'] == zona_id
+    id_datos_por_zona = data_economicos[filtro]['ID_Datos'].unique()
+    if len(id_datos_por_zona) > 0:
+        max_id_datos = max(id_datos_por_zona)
+    
+    return max_id_datos
 
 # Lista de URLs que deseas obtener y analizar
 urls = [
@@ -49,7 +59,7 @@ urls = [
     ]
 
 # Crear una lista de encabezados de columna
-encabezados = ["Propiedad_ID", "Zona_ID", "Tipo_Propiedad", "Ubicacion", "Tamanho", "Habitaciones", "Precio", "Antiguedad", "Carac_Adicionales", "Ubicacion_Especial"]
+encabezados = ["Propiedad_ID", "ID_Datos", "Tipo_Propiedad", "Ubicacion", "Tamanho", "Habitaciones", "Precio", "Antiguedad", "Carac_Adicionales", "Ubicacion_Especial"]
 
 # Crear una lista para almacenar los registros ficticios
 registros = []
@@ -76,9 +86,10 @@ for url in urls:
         # Generar un id único
         propiedad_id = generar_id()
 
-        # Llama a la función y obtén el valor de Zona_ID
+        # Obtener el último ID_Datos correspondiente a esta Zona_ID
         ubicacion_esp = soup.find('div', class_='col-xs-12 key-address fts-mark').get_text().strip()
-        zona_id = data[data['Barrios'].str.contains(ubicacion_esp[17:26])]['Zona_ID'].values[0]
+        zona_id = data_zona[data_zona['Barrios'].str.contains(ubicacion_esp[17:26])]['Zona_ID'].values[0]
+        ultimo_id_datos = obtener_ultimo_id_datos(zona_id)
         
         # Tipo de propiedad
         titulo = soup.find('div', class_='col-xs-12 key-title').find('h1').get_text()
@@ -146,7 +157,7 @@ for url in urls:
         #ubicacion_esp = unidecode(demoji.replace(ubicacion_esp.replace("°", "o"))).split # Elimina los emojis del texto
 
          # Agregar los datos a la lista de registros
-        registros.append([propiedad_id, zona_id, tipo_de_propiedad, ubicacion, tamanho, habitaciones, precio, antiguedad, caracteristicas_adi, ubicacion_esp])
+        registros.append([propiedad_id, ultimo_id_datos, tipo_de_propiedad, ubicacion, tamanho, habitaciones, precio, antiguedad, caracteristicas_adi, ubicacion_esp])
 
 # Nombre del archivo CSV donde deseas guardar los datos
 nombre_archivo = 'datos/datos_propiedades.csv'
