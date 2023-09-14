@@ -20,11 +20,11 @@ predicciones = model.predict(X_nuevos)  # Realizar las predicciones
 # Agregar las predicciones al DataFrame original
 data_nuevos['Precio_Predicho'] = predicciones
 
-# Obtener la fecha actual en el formato AAAA-MM-DD
-fecha_actual = datetime.now().strftime("%Y-%m-%d")
+# Obtener la fecha y hora actual en el formato AAAA-MM-DD_HH-MM-SS
+fecha_hora_actual = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-# Nombre del archivo con la fecha actual
-nombre_archivo = f'datos_predichos/precios_{fecha_actual}.csv'
+# Nombre del archivo con la fecha y hora actual
+nombre_archivo = f'datos_predichos/precios_{fecha_hora_actual}.csv'
 
-# Guarda el DataFrame en el archivo CSV con el nombre que incluye la fecha actual
+# Guarda el DataFrame en el archivo CSV con el nombre que incluye la fecha y hora actual
 data_nuevos.to_csv(nombre_archivo, index=False)

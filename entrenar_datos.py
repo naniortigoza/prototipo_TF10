@@ -8,7 +8,7 @@ datos_economicos = pd.read_csv('datos/datos_economicos.csv')
 datos_propiedades = pd.read_csv('datos/datos_propiedades.csv')
 
 # Unir los datos por Zona_ID
-datos_combinados = datos_propiedades.merge(datos_economicos, left_on='Zona_ID', right_on='Zona_ID', how='inner')
+datos_combinados = datos_propiedades.merge(datos_economicos, left_on='ID_Datos', right_on='ID_Datos', how='inner')
 
 # Preparar los datos
 X = datos_combinados[['Tasa_Inflacion', 'Variacion_PIB', 'Precio_m2', 'Tamanho', 'Habitaciones']]
